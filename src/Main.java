@@ -1,3 +1,4 @@
+import people.DriverC;
 import transport.Bus;
 import transport.PassangerCar;
 import transport.Truck;
@@ -20,5 +21,11 @@ public class Main {
         Truck me43 = new Truck("Mercedess","43",3.7);
         Truck to54 = new Truck("Toyota","54",4);
         Truck la32 = new Truck("Lada","32",3.0);
+
+        DriverC dima = new DriverC("Шевченко Дмитрий Леонидович", true, 4);
+        DriverC vova = new DriverC("Булкин Владимир Сергеевич", true, 7);
+        DriverC roma = new DriverC("Булкин Роман Сергеевич", true, 3);
+        dima.regToCompetition(fo32);
+
     }
 }
