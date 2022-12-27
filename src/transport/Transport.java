@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport {
+public abstract class Transport {
     private final String brand;
     private final String model;
     private final double engineValue;
@@ -40,6 +40,20 @@ public class Transport {
 
     void stopMotion(){
         System.out.println(getModel() + " закончил движение");
+    }
+
+    public void pitStop() {
+        System.out.println(getModel() + " остановился на pitstop");
+
+    }
+    public void mustTime() {
+        System.out.println(getModel() + " имеет лучшее время");
+
+    }
+
+    public void maxSpeed() {
+        System.out.println(getModel() + " имеет лучшую скорость");
+
     }
 
     @Override
