@@ -18,8 +18,6 @@ public abstract class Transport {
             this.model = "defoult";
         }else this.model = model;
 
-        System.out.println(toString());
-
     }
 
     public String getBrand() {
@@ -56,6 +54,7 @@ public abstract class Transport {
 
     }
 
+    abstract void printType();
     @Override
     public String toString() {
         return
