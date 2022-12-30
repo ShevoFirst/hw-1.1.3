@@ -49,12 +49,18 @@ public abstract class Transport {
 
     }
 
+    public String getName(){
+        return getBrand() + " " + getModel();
+    }
+
     public void maxSpeed() {
         System.out.println(getModel() + " имеет лучшую скорость");
 
     }
 
-    abstract void printType();
+    public abstract boolean diagnosed() throws Exception;
+
+    public abstract void printType();
     @Override
     public String toString() {
         return

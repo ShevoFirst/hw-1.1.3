@@ -37,11 +37,16 @@ public class PassangerCar extends Transport implements Competition{
     }
 
     @Override
-    void printType() {
+    public boolean diagnosed() throws Exception {
+        return Math.random() > 0.5;
+    }
+
+    @Override
+    public void printType() {
         if (typeByBody == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         }
-        System.out.println(typeByBody.name());
+        System.out.println(typeByBody.toString());
     }
 
     public String toString() {
