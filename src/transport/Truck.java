@@ -1,6 +1,10 @@
 package transport;
 
 
+import transport.people.AutoMechanic;
+
+import java.util.List;
+
 public class Truck extends Transport implements Competition{
     private LoadCapacity loadCapacity;
     Truck truck;
@@ -47,11 +51,10 @@ public class Truck extends Transport implements Competition{
             return "Грузоподъемность: от "+downer+" до " + upper +" тонн";
         }
     }
-    public Truck(String brand, String model, double engineValue, LoadCapacity loadCapacity) {
-        super(brand, model, engineValue);
+    public Truck(String brand, String model, double engineValue, LoadCapacity loadCapacity, List<AutoMechanic> autoMechanic) {
+        super(brand, model, engineValue , autoMechanic);
         this.loadCapacity = loadCapacity;
         System.out.println(this);
-
     }
 
     public String toString() {

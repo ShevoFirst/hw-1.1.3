@@ -1,6 +1,10 @@
 package transport;
 
 
+import transport.people.AutoMechanic;
+
+import java.util.List;
+
 public class PassangerCar extends Transport implements Competition{
     private final TypeByBody typeByBody;
     PassangerCar passangerCar;
@@ -26,8 +30,8 @@ public class PassangerCar extends Transport implements Competition{
             return body;
         }
     }
-    public PassangerCar(String brand, String model, double engineValue , TypeByBody typeByBody) {
-        super(brand, model, engineValue);
+    public PassangerCar(String brand, String model, double engineValue , TypeByBody typeByBody , List<AutoMechanic> autoMechanic) {
+        super(brand, model, engineValue,autoMechanic);
         this.typeByBody = typeByBody;
         System.out.println(toString());
     }
