@@ -6,11 +6,16 @@ public class Truck extends Transport implements Competition{
     Truck truck;
 
     @Override
+    public boolean diagnosed() throws Exception {
+        return Math.random() > 0.5;
+    }
+
+    @Override
     public void printType() {
         if (loadCapacity == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         }
-        System.out.println(loadCapacity.name());
+        System.out.println(loadCapacity.toString());
     }
 
     public enum LoadCapacity{

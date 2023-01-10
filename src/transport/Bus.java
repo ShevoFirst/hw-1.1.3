@@ -42,11 +42,17 @@ public class Bus  extends Transport  implements Competition{
     }
 
     @Override
-    void printType() {
+    public boolean diagnosed() throws Exception {
+        System.out.println("Автобус " + getModel()+ " в диагностике не нуждается");
+        return true;
+    }
+
+    @Override
+    public void printType() {
         if (capacity == null) {
             System.out.println("Данных по транспортному средству недостаточно");
         }
-        System.out.println(capacity.name());
+        System.out.println(capacity.toString());
     }
 
     public String toString() {
