@@ -2,9 +2,10 @@ package transport.people;
 
 import transport.Transport;
 
-public class AutoMechanic <C extends Transport>{
+public class AutoMechanic{
     private String fullName;
     private String company;
+
 
     public AutoMechanic(String fullName, String company) {
         this.fullName = fullName;

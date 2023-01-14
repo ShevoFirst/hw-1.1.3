@@ -30,8 +30,8 @@ public class PassangerCar extends Transport implements Competition{
             return body;
         }
     }
-    public PassangerCar(String brand, String model, double engineValue , TypeByBody typeByBody , List<AutoMechanic> autoMechanic) {
-        super(brand, model, engineValue,autoMechanic);
+    public PassangerCar(String brand, String model, double engineValue , TypeByBody typeByBody) {
+        super(brand, model, engineValue);
         this.typeByBody = typeByBody;
         System.out.println(toString());
     }

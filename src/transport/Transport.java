@@ -6,12 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Transport {
-    private List<AutoMechanic> autoMechanics;
     private final String brand;
     private final String model;
     private final double engineValue;
 
-    public Transport(String brand, String model, double engineValue , List<AutoMechanic> autoMechanic) {
+    public Transport(String brand, String model, double engineValue) {
         if (engineValue <= 0) {
             this.engineValue = 1.5;
         }else this.engineValue = engineValue;
@@ -24,7 +23,6 @@ public abstract class Transport {
             this.model = "defoult";
         }else this.model = model;
 
-        this.autoMechanics = autoMechanic;
     }
 
     public String getBrand() {
@@ -60,13 +58,7 @@ public abstract class Transport {
         return getBrand() + " " + getModel();
     }
 
-    public List<AutoMechanic> getAutoMechanics() {
-        return autoMechanics;
-    }
 
-    public void setAutoMechanics(List<AutoMechanic> autoMechanics) {
-        this.autoMechanics = autoMechanics;
-    }
 
     public void maxSpeed() {
         System.out.println(getModel() + " имеет лучшую скорость");
