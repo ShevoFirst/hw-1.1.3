@@ -39,8 +39,8 @@ public class Bus  extends Transport  implements Competition{
             return "Вместимость: от "+downer+" до " + upper +" человек";
         }
     }
-    public Bus(String brand, String model, double engineValue, Capacity capacity , List<AutoMechanic> autoMechanic) {
-        super(brand, model, engineValue , autoMechanic);
+    public Bus(String brand, String model, double engineValue, Capacity capacity) {
+        super(brand, model, engineValue);
         this.capacity = capacity;
         System.out.println(this);
     }
