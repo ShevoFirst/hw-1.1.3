@@ -4,10 +4,7 @@ import transport.Bus;
 import transport.PassangerCar;
 import transport.Truck;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -51,7 +48,19 @@ public class Main {
         drivers.add(dima);
         drivers.add(vova);
         drivers.add(roma);
-        autoMechanics.get(fo32).fixCar();
+        System.out.println();
+
+        Set<AutoMechanic> set = new HashSet<>();
+        set.add(autoMechanics.get(granta));
+        set.add(autoMechanics.get(toyota));
+        set.add(autoMechanics.get(toyota));
+        set.add(autoMechanics.get(fo32));
+
+        Iterator<AutoMechanic> iterator = set.iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
 
     }
         private static void service(Transport... transports) throws Exception {
