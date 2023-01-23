@@ -41,10 +41,10 @@ public class AutoMechanic{
         if (o == null || getClass() != o.getClass()) return false;
         AutoMechanic that = (AutoMechanic) o;
         return fullName.equals(that.fullName) && company.equals(that.company);
-    }
+    }//
 
     @Override
     public int hashCode() {
         return Objects.hash(fullName, company);
-    }
+    } //
 }
