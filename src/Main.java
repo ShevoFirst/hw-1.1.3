@@ -50,16 +50,17 @@ public class Main {
         drivers.add(roma);
         System.out.println();
 
-        Set<AutoMechanic> set = new HashSet<>();
-        set.add(autoMechanics.get(granta));
-        set.add(autoMechanics.get(toyota));
-        set.add(autoMechanics.get(toyota));
-        set.add(autoMechanics.get(fo32));
 
-        Iterator<AutoMechanic> iterator = set.iterator();
+        Set<AutoMechanic> set = new HashSet<>(); //
+        set.add(autoMechanics.get(granta)); //
+        set.add(autoMechanics.get(toyota)); //
+        set.add(autoMechanics.get(toyota)); //
+        set.add(autoMechanics.get(fo32)); //
 
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
+        Iterator<AutoMechanic> iterator = set.iterator(); //
+
+        while (iterator.hasNext()){ //
+            System.out.println(iterator.next());//
         }
 
     }
