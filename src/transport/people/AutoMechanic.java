@@ -2,6 +2,8 @@ package transport.people;
 
 import transport.Transport;
 
+import java.util.Objects;
+
 public class AutoMechanic{
     private String fullName;
     private String company;
@@ -32,4 +34,17 @@ public class AutoMechanic{
                 "fullName='" + fullName + '\'' +
                 ", company='" + company;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AutoMechanic that = (AutoMechanic) o;
+        return fullName.equals(that.fullName) && company.equals(that.company);
+    }//.
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, company);
+    } //.
 }
